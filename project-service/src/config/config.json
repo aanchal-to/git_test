@@ -1,0 +1,52 @@
+{
+  "development": {
+    "username": "root",
+    "password": "password",
+    "database": "db",
+    "host": "project-service-db",
+    "dialect": "mysql",
+    "SECRET_KEY": "^@6zR!Mj:uYn2SpN^qN+M4",
+    "user_service": {
+      "URL": "http://user-service:7000/v1/apis/user/",
+      "PORT": "7000",
+      "PROFILE_IMG_URL":"http://103.57.245.244/user-service/userProfile/"
+    },
+    "auth_service": {
+        "URL": "http://auth-service:7001/v1/apis/auth/",
+        "PORT": "7001",
+        "IMAGE_URL":""
+    },
+    "lead_service": {
+      "URL": "http://lead-service:7003/v1/apis/leads/",
+      "PORT": "7003",
+      "PROFILE_IMG_URL":""
+    },
+    "notification_service": {
+      "URL": "http://103.57.245.244/notification-service/v1/apis/notification/",
+      "PORT": "7009"
+    },
+    "file_upload_service":{
+      "URL": "http://103.57.245.244/file-upload-service/v1/apis/file-upload/",
+      "PORT": "7010"
+    },
+    "area_access": {
+      "URL": "http://103.57.245.244/area-access-service/v1/apis/area-access/",
+      "PORT": "7004"
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "_crm_auth_service",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "SECRET_KEY": "^@6zR!Mj:uYn2SpN^qN+M4"
+  }
+}
