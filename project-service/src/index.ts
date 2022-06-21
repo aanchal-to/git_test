@@ -21,7 +21,7 @@ app.use(
 )
 
 
-app.use('/v1/apis/projects/', routes);
+app.use(routes);
 
 //permission to get image from node server
 app.use(express.static('public'));

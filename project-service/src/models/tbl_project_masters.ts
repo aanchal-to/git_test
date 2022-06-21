@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import {sequelizeConn} from "./connect";
+import  {tbl_project_milestone_mappings} from "./tbl_project_milestone_mapping"
 
 const tbl_project_masters = sequelizeConn.define("tbl_project_masters", {
   
@@ -110,6 +111,7 @@ const tbl_project_masters = sequelizeConn.define("tbl_project_masters", {
   }
   }
 );
+
 
 
   export { tbl_project_masters };

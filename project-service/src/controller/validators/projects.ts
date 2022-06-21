@@ -268,6 +268,18 @@ const projectExtraInfoSchema = {
     required: ["project_payment_id", "amount","transaction_id", "payment_status"],
     additionalProperties: false,
 }
+const projectMilestoneMapping = {
+    type: "object",
+    properties: {
+        project_id : { type: "number" },
+        project_ref_no : { type: "string" },
+        milestone_id : { type: "number" },
+        status : { type : "number"}
+    },
+    required: ["project_id","project_ref_no","milestone_id"],
+    additionalProperties: false,
+
+}
 
 export {
     projectSchema,

@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import {sequelizeConn} from "./connect";
 
+
 const tbl_project_milestone_tasks_masters = sequelizeConn.define("tbl_project_milestone_tasks_masters", {
     id: {
         allowNull: false,
