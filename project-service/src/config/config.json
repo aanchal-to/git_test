@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
-    "database": "db",
-    "host": "project-service-db",
+    "password": "",
+    "database": "project_service",
+    "host": "localhost",
     "dialect": "mysql",
     "SECRET_KEY": "^@6zR!Mj:uYn2SpN^qN+M4",
     "user_service": {

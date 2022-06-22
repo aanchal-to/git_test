@@ -1,6 +1,7 @@
 const router = require("express").Router();
-import {get_tbl_project_milestone_mapping} from '../controller/projectController';
-
+import {create_tbl_project_milestone_mapping} from '../controller/projectController';
+import {get_tbl_project_milestone_mapping } from '../controller/projectController';
+import { get_tbl_project_milestone_task_master } from '../controller/projectController';
 // import {
 //   createProject,
 //   createBudgets,
@@ -47,7 +48,7 @@ import {get_tbl_project_milestone_mapping} from '../controller/projectController
 //   getCompanyMasters
 // } from '../controller/materialController'
 
-// import { VerifyToken } from "../middleware/VerifyToken";
+//import { VerifyToken } from "../middleware/VerifyToken";
 /**
  * GET ROUTES
  */
@@ -93,7 +94,9 @@ import {get_tbl_project_milestone_mapping} from '../controller/projectController
 // router.post('/update-project-extra-info', VerifyToken, updateProjectExtraInfo);
 // router.post('/list/project-infos', VerifyToken, listAllProjectsWithInfoByClientIdByPost);
 // router.post('/update-project-info', VerifyToken, updatProjectInfo);
-router.post('/create/project-milestone-map', get_tbl_project_milestone_mapping)
+router.post('/create/project-milestone-map', create_tbl_project_milestone_mapping)
+router.get('/get/tbl-project-milestone-mapping', get_tbl_project_milestone_mapping)
+router.get('/get/tbl-project-milestone-task-master',get_tbl_project_milestone_task_master )
 
 
 export default router;

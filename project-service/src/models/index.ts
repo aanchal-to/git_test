@@ -1,11 +1,7 @@
 import { tbl_project_masters } from './tbl_project_masters';
 import { tbl_project_milestone_masters } from './tbl_project_milestone_masters';
 import { tbl_project_milestone_mappings } from './tbl_project_milestone_mapping';
-
-
-
-
-
+import {tbl_project_milestone_tasks_masters} from './tbl_project_milestone_tasks_masters'
 
 
 tbl_project_milestone_masters.hasMany(tbl_project_milestone_mappings, {
@@ -14,7 +10,7 @@ tbl_project_milestone_masters.hasMany(tbl_project_milestone_mappings, {
 })
 tbl_project_milestone_mappings.belongsTo(tbl_project_milestone_masters, { 
   foreignKey: 'milestone_id',
-      as: 'tbl_project_milestone_mappings'        
+      as: 'Milestones'        
 })
 
 tbl_project_masters.hasMany(tbl_project_milestone_mappings, {
@@ -23,8 +19,29 @@ tbl_project_masters.hasMany(tbl_project_milestone_mappings, {
 })
 tbl_project_milestone_mappings.belongsTo(tbl_project_masters, { 
   foreignKey: 'project_id',
-      as: 'tbl_project_masters'        
+      as: 'Projects'        
 })
+
+
+
+tbl_project_milestone_masters.hasMany(tbl_project_milestone_tasks_masters, {
+  foreignKey: "milestone_id",
+  as: 'Milestone_Task'
+})
+tbl_project_milestone_tasks_masters.belongsTo(tbl_project_milestone_masters, { 
+  foreignKey: 'milestone_id',
+      as: 'Milestones'        
+})
+// tbl_project_masters.hasMany(tbl_project_milestone_tasks_masters, {
+//   foreignKey: "project_id",
+//   as: 'tbl_project_milestone_tasks_masters'
+// })
+// tbl_project_milestone_tasks_masters.belongsTo(tbl_project_masters, { 
+//   foreignKey: 'project_id',
+//       as: 'tbl_project_masters'        
+// })
+
+
 
 // tbl_project_milestone_masters.hasMany(tbl_project_payment_mappings, {
 //   as:'projectPaymentInfo',
@@ -48,6 +65,6 @@ tbl_project_milestone_mappings.belongsTo(tbl_project_masters, {
 export {
   tbl_project_masters,
   tbl_project_milestone_masters,
-  tbl_project_milestone_mappings
- 
+  tbl_project_milestone_mappings,
+  tbl_project_milestone_tasks_masters 
 }
