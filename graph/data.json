@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Brick",
+      "graphData": 12000
+    },
+    {
+      "id": 2,
+      "name": "Ambuja",
+      "graphData": 17678
+    },
+    {
+      "id": 3,
+      "name": "Bangur",
+      "graphData": 14234
+    },
+    {
+      "id": 4,
+      "name": "Steel",
+      "graphData": 34893
+    },
+    {
+      "id": 5,
+      "name": "Rod",
+      "graphData": 78436
+    },
+    {
+      "id": 6,
+      "name": "Sand",
+      "graphData": 13900
+    },
+    {
+      "id": 7,
+      "name": "Boxes",
+      "graphData": 67342
+    }
+  ]
+}
